@@ -81,16 +81,19 @@ users = {
 }
 
 # Get Jonathan's Twitter handle (i.e. the string "jonnyt")
-p users["Jonathan"][:twitter]
+users["Jonathan"][:twitter]
 # Get Erik's hometown
 users["Erik"][:home_town]
 # Get the array of Erik's lottery numbers
 users["Erik"][:lottery_numbers]
 # Get the type of Avril's pet Monty
-users
+users["Avril"][:pets][0][:species]
 # Get the smallest of Erik's lottery numbers
+smallest = [users["Erik"][:lottery_numbers].sort.shift]
 # Return an array of Avril's lottery numbers that are even
+even_numbers = [users["Avril"][:lottery_numbers].select { |num| num.even?}]
 # Erik is one lottery number short! Add the number 7 to be included in his lottery numbers
+
 # Change Erik's hometown to Edinburgh
 # Add a pet dog to Erik called "Fluffy"
 # Add another person to the users hash
