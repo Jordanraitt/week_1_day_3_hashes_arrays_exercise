@@ -16,5 +16,10 @@ stops.delete_at(1)
 # How many stops there are in the array?
 stops.length
 # How many ways can we return "Falkirk High" from the array?
+ary[2] slice[2]
 # Reverse the positions of the stops in the array
+stops.reverse
 # Print out all the stops using a for loop
+for des in stops
+  p des
+end
