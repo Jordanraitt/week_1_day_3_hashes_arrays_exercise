@@ -93,7 +93,23 @@ smallest = [users["Erik"][:lottery_numbers].sort.shift]
 # Return an array of Avril's lottery numbers that are even
 even_numbers = [users["Avril"][:lottery_numbers].select { |num| num.even?}]
 # Erik is one lottery number short! Add the number 7 to be included in his lottery numbers
-
+users["Erik"][:lottery_numbers].push(7)
 # Change Erik's hometown to Edinburgh
+users["Erik"][:home_town] = "Edinburgh"
 # Add a pet dog to Erik called "Fluffy"
+fluffy = {
+  name: "Fluffy",
+  species: "dog"
+}
+users["Erik"][:pets].insert(0,fluffy)
+users["Erik"][:pets]
 # Add another person to the users hash
+add_user = {
+  "Jordan" => {
+    twitter: "faffmaster",
+    lottery_numbers: [0, 0, 0, 0],
+    home_town: "Inverurie",
+    pets: "none"
+  }
+}
+users.merge(add_user)
